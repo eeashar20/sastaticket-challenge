@@ -4,11 +4,17 @@ from rest_framework.permissions import IsAdminUser
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
-from store.models import Customer, Order, OrderItem
-from store.serializers import CustomerSerializer, OrderSerializer, OrderItemSerializer
+from store.models import Customer, Order, OrderItem, Product
+from store.serializers import CustomerSerializer, OrderSerializer, OrderItemSerializer, ProductSerializer
 
 
 # Create your views here.
+
+class ProductViewSet(ModelViewSet):
+    serializer_class = ProductSerializer
+    queryset = Product.objects.all()
+    permission_classes = [IsAdminUser]
+
 
 class CustomerViewSet(ModelViewSet):
     serializer_class = CustomerSerializer
