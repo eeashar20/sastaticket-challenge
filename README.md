@@ -1,5 +1,16 @@
 # Storefront
 
+# Project Setup
+Following are the commands to setup the project
+
+```shell
+pipenv install
+```
+
+```shell
+python manage.py runserver
+```
+
 # Docker Setup
 The docker containers runs the backend code for the storefront web application. The application is built with 
 Python3.9 and runs on python docker image ```python:3.10.9```. 
