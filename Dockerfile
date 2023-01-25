@@ -1,4 +1,4 @@
-FROM python:3.9.13-bullseye
+FROM python:3.10.9-bullseye
 
 # Python output buffering is the process of storing the output of your code in buffer memory.
 # Once the buffer is full, the output gets displayed on the standard output screen. Buffering is enabled by default.
